@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>H</title>
+</head>
+<body>
+  <button class="add" onclick="
+     add();
+    ">Add</button>
+  <button class="remove" onclick="
+    remove();
+  ">Remove</button>
+  <script>
+    let messages = 2;
+   function add(){
+      
+      messages ++;
+      
+      console.log(`(${messages}) New messages`);
+      
+    }
+    function remove(){
+      
+     if(messages > 0){
+      messages --;
+      setInterval(interval);
+     }
+      
+
+     if(messages === 0){
+      clearInterval(interval);
+        document.title ='App'
+      }
+      console.log(`(${messages}) New messages`);
+    }
+
+    let interval = setInterval(function(){
+    
+     if(document.title === 'App'){
+      document.title = `(${messages}) New messages`
+     } 
+     else{
+      document.title = 'App'
+     }
+    },1000);
+    function stop(){
+      
+    }
+    
+  </script>
+</body>
+</html>

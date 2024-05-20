@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>C</title>
+  </head>
+  <body>
+    <button
+      class="btn"
+      onclick="
+        timeOut();
+      "
+    >
+      Start
+    </button>
+    <script>
+      function timeOut() {
+        setTimeout(function () {
+          document.querySelector(".btn").innerHTML = "Finished!";
+        }, 1000);
+      }
+    </script>
+  </body>
+</html>
